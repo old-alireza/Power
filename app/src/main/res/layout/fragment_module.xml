@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:clickable="true">
+
+    <FrameLayout
+        android:id="@+id/container_fragment_module"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/padding_normal"
+        android:textSize="@dimen/size_large"
+        android:text="@string/module"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_nian"
+            style="@style/basic"
+            android:elevation="-20dp"
+            android:background="@drawable/frame_full"
+            android:text="@string/button_nian"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_PSP"
+            style="@style/basic"
+            android:background="@drawable/frame_full"
+            android:elevation="-20dp"
+            android:text="@string/psp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_resa"
+            android:background="@drawable/frame_full"
+            style="@style/basic"
+            android:elevation="-20dp"
+            android:text="@string/resa"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

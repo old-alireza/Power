@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Power</string>
+    <string name="sendingButton">ارسالی به کرمان</string>
+    <string name="receivingButton">دریافتی از کرمان</string>
+    <string name="module">ماژول</string>
+    <string name="button_nian">نیان</string>
+    <string name="psp">PSP</string>
+    <string name="resa">رسا</string>
+    <string name="insert">افزودن</string>
+    <string name="view_list">لیست</string>
+    <string name="center_name">نام مرکز </string>
+    <string name="serial_number">شماره سریال </string>
+    <string name="date">تاریخ </string>
+    <string name="mail_number">شماره نامه</string>
+    <string name="ok">اضافه کردن</string>
+    <string name="back">بازگشت</string>
+    <string name="toast_insert">اضافه شد</string>
+    <string name="toast_updated">ویرایش انجام شد</string>
+    <string name="toast_deleted">حذف موفقیت آمیز بود</string>
+    <string name="toast_enter_value">لطفا مقادیر را کامل کنید</string>
+    <string name="edit">ویرایش</string>
+    <string name="cancel">انصراف</string>
+    <string name="warning">هشدار</string>
+    <string name="message_delete">آیا از حذف کردن مطمعن هستید؟</string>
+    <string name="yes">بله</string>
+    <string name="info">اطلاعات</string>
+    <string name="mail_date">تاریخ نامه</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="theme">تم</string>
+    <string name="theme_message">تم را انتخاب کنید</string>
+    <string name="toast">پیغام</string>
+    <string name="toast_message">نمایش پیغام</string>
+    <string name="toast_disable">پیغام نشان داده نمی شود</string>
+    <string name="toast_enable">پیغام نشان داده می شود</string>
+</resources>

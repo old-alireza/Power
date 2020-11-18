@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".FormActivity"
+    android:background="@color/dark">
+
+
+
+    <EditText
+        android:id="@+id/edittext_center_name"
+        style="@style/basic"
+        android:hint="@string/center_name"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/edittext_serial_number"
+        style="@style/basic"
+        android:hint="@string/serial_number"
+        android:textAlignment="center"
+        android:maxLines="1"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edittext_date"
+        style="@style/basic"
+        android:inputType="datetime"
+        android:maxLength="8"
+        android:maxLines="1"
+        android:hint="@string/date" />
+
+    <LinearLayout
+        style="@style/basic"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/mail_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="@string/mail_number"
+            android:textSize="@dimen/size_small"
+            android:textColorHint="@color/white_yellow"
+            android:textColor="@color/white_yellow"
+            android:maxLines="1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="@dimen/margin_small"/>
+
+        <EditText
+            android:id="@+id/mail_date"
+            android:hint="@string/mail_date"
+            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:textSize="@dimen/size_normal"
+            android:layout_weight="3"
+            android:maxLength="8"
+            android:textColor="@color/white_yellow"
+            android:textColorHint="@color/white_yellow"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
