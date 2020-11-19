@@ -113,19 +113,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         dialogEdit.setPositiveButton(context.getString(R.string.edit), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (editTextCoreName.getText().toString().trim().isEmpty() ||
-                        editTextDate.getText().toString().trim().isEmpty() ||
-                        editTextMailNumber.getText().toString().trim().isEmpty() ||
-                        editTextSerialNumber.getText().toString().trim().isEmpty()){
-                    Toast toast = new Toast(context);
-                    toast.setDuration(Toast.LENGTH_SHORT);
-                    View view = LayoutInflater.from(context).inflate(R.layout.custom_toast,null);
-                    TextView message = view.findViewById(R.id.message_toast);
-                    message.setText(R.string.toast_enter_value);
-                    toast.setView(view);
-                    toast.show();
 
-                } else {
                     String name = editTextCoreName.getText().toString().trim();
                     String serial = editTextSerialNumber.getText().toString().trim();
                     String date = editTextDate.getText().toString().trim();
@@ -141,7 +129,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     list.get(position).setSerialNumber(serial);
                     notifyDataSetChanged();
                     dialog.dismiss();
-                }
+
             }
         });
 

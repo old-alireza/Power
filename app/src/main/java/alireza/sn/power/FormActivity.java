@@ -18,9 +18,13 @@ public class FormActivity extends AppCompatActivity {
 
     private EditText coreName;
     private EditText serialNumber;
-    private EditText date;
+    private EditText dateDay;
+    private EditText dateMonth;
+    private EditText dateYear;
     private EditText mailNumber;
-    private EditText mailDate;
+    private EditText mailDateDay;
+    private EditText mailDateMonth;
+    private EditText mailDateYear;
 
     private String databaseName;
 
@@ -44,26 +48,19 @@ public class FormActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String strCoreName = coreName.getText().toString().trim();
                 String strSerialNum = serialNumber.getText().toString().trim();
-                String strDate = date.getText().toString().trim();
-                String strMailDate = mailDate.getText().toString().trim();
-                String strMailNumber = mailNumber.getText().toString().trim();
+                String strDate = getString(R.string.date_string , dateDay.getText().toString().trim(),
+                        dateMonth.getText().toString().trim(),
+                        dateYear.getText().toString().trim());
 
-                if (strCoreName.trim().isEmpty() ||
-                strSerialNum.trim().isEmpty() ||
-                strDate.trim().isEmpty() ||
-                strMailNumber.trim().isEmpty()) {
-                    Toast toast = new Toast(FormActivity.this);
-                    toast.setDuration(Toast.LENGTH_SHORT);
-                    View view = LayoutInflater.from(FormActivity.this).inflate(R.layout.custom_toast,null);
-                    TextView message = view.findViewById(R.id.message_toast);
-                    message.setText(R.string.toast_enter_value);
-                    toast.setView(view);
-                    toast.show();
-                } else {
+                String strMailDate = getString(R.string.date_string , mailDateDay.getText().toString().trim(),
+                        mailDateMonth.getText().toString().trim(),
+                        mailDateYear.getText().toString().trim());
+
+                String strMailNumber = mailNumber.getText().toString().trim();
                     MyModule myModule = new MyModule(strCoreName,strSerialNum,strDate,strMailNumber,strMailDate);
                     new MyModuleRepository(getApplicationContext(),databaseName).insert(myModule);
                     finish();
-                }
+
             }
         });
     }
@@ -72,8 +69,12 @@ public class FormActivity extends AppCompatActivity {
         submitBtn = findViewById(R.id.button_submit);
         coreName = findViewById(R.id.edittext_center_name);
         serialNumber = findViewById(R.id.edittext_serial_number);
-        date = findViewById(R.id.edittext_date);
+        dateDay = findViewById(R.id.edittext_date_day);
+        dateMonth = findViewById(R.id.edittext_date_month);
+        dateYear = findViewById(R.id.edittext_date_year);
         mailNumber = findViewById(R.id.mail_number);
-        mailDate = findViewById(R.id.mail_date);
+        mailDateDay = findViewById(R.id.mail_date_day);
+        mailDateMonth = findViewById(R.id.mail_date_month);
+        mailDateYear = findViewById(R.id.mail_date_year);
     }
 }

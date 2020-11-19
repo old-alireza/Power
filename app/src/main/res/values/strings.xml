@@ -33,4 +33,5 @@
     <string name="toast_message">نمایش پیغام</string>
     <string name="toast_disable">پیغام نشان داده نمی شود</string>
     <string name="toast_enable">پیغام نشان داده می شود</string>
+    <string name="date_string">%s / %s / %s</string>
 </resources>
