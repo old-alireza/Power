@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/moduleFrag"
+        android:name="alireza.sn.power.ModuleFrag"
+        android:label="fragment_module2"
+        tools:layout="@layout/fragment_module" >
+        <action
+            android:id="@+id/action_moduleFrag_to_insertFragment"
+            app:destination="@id/insertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="alireza.sn.power.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_moduleFrag"
+            app:destination="@id/moduleFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertFragment"
+        android:name="alireza.sn.power.InsertFragment"
+        android:label="fragment_insert"
+        tools:layout="@layout/fragment_insert" />
+</navigation>
