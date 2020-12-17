@@ -1,74 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="@dimen/padding_normal"
-    android:background="@color/dark"
-    android:gravity="center">
+    android:layout_height="wrap_content">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/center_name"/>
+        android:background="@color/dark"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_normal">
 
-    <TextView
-        android:id="@+id/info_name_core"
-        style="@style/basic"
-        android:text="center name" />
 
-    <View
-        android:layout_width="250dp"
-        android:layout_height="2dp"
-        android:background="@color/gold_.3"
-        android:layout_marginTop="@dimen/margin_small"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/center_name" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/serial_number"/>
+        <HorizontalScrollView
+            style="@style/basic">
+            <TextView
+                android:id="@+id/info_name_core"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="center name"/>
 
-    <TextView
-        android:id="@+id/info_serial_number"
-        style="@style/basic"
-        android:text="serial number" />
+        </HorizontalScrollView>
 
-    <View
-        android:layout_width="250dp"
-        android:layout_height="2dp"
-        android:background="@color/gold_.3"
-        android:layout_marginTop="@dimen/margin_small"/>
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/gold_.3" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/serial_number" />
 
-    <TextView
-        android:id="@+id/info_date"
-        style="@style/basic"
-        android:text="date" />
+        <HorizontalScrollView
+            style="@style/basic">
 
-    <View
-        android:layout_width="250dp"
-        android:layout_height="2dp"
-        android:background="@color/gold_.3"
-        android:layout_marginTop="@dimen/margin_small"/>
+            <TextView
+                android:id="@+id/info_serial_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="serial number"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="شماره نامه و تاریخ" />
+        </HorizontalScrollView>
 
-    <TextView
-        android:id="@+id/info_mail_number_date"
-        style="@style/basic"
-        android:text="mail number and date" />
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/gold_.3" />
 
-    <View
-        android:layout_width="250dp"
-        android:layout_height="2dp"
-        android:background="@color/gold_.3"
-        android:layout_marginTop="@dimen/margin_small"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date" />
 
-</LinearLayout>
+        <HorizontalScrollView
+            style="@style/basic">
+
+            <TextView
+                android:id="@+id/info_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="date"/>
+
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/gold_.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="شماره نامه و تاریخ" />
+
+            <TextView
+                android:id="@+id/info_mail_number_date"
+                style="@style/basic" />
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/gold_.3" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

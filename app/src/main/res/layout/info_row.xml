@@ -7,14 +7,14 @@ android:layout_height="wrap_content"
 android:background="@drawable/frame_full"
     android:layout_marginTop="5dp">
 
-<TextView
-    android:id="@+id/row_core_name"
-    style="@style/basic"
-    android:background="@android:color/transparent"
-    android:text="this is core name"
-    android:layout_alignStart="@id/layout_icons"
-    android:layout_centerInParent="true"
-    android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/row_core_name"
+        style="@style/basic"
+        android:background="@android:color/transparent"
+        android:text="this is core name"
+        android:layout_centerInParent="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="horizontal"/>
 
 <LinearLayout
     android:id="@+id/layout_icons"

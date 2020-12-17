@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,182 +9,193 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".FormActivity"
-    android:background="@drawable/background_main">
+    android:background="@drawable/background_list">
 
-
-
-    <EditText
-        android:id="@+id/edittext_center_name"
-        style="@style/basic"
-        android:hint="@string/center_name"
-        android:inputType="text"
-        android:maxLines="1"/>
-
-    <EditText
-        android:id="@+id/edittext_serial_number"
-        style="@style/basic"
-        android:hint="@string/serial_number"
-        android:textAlignment="center"
-        android:maxLines="1"
-        android:inputType="number" />
-
-    <LinearLayout
-        style="@style/basic"
-        android:gravity="center">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <EditText
-                android:id="@+id/edittext_date_day"
-                android:layout_width="wrap_content"
-                android:inputType="number"
-                android:maxLength="2"
-                android:textAlignment="center"
-                android:maxLines="1"
-                android:ems="2"
-                android:textColor="@color/white"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"/>
+                android:id="@+id/edittext_center_name"
+                style="@style/basic"
+                android:hint="@string/center_name"
+                android:inputType="text"/>
 
             <EditText
-                android:id="@+id/edittext_date_month"
-                android:layout_width="wrap_content"
-                android:textColor="@color/white"
-                android:inputType="number"
-                android:maxLength="2"
-                android:ems="2"
+                android:id="@+id/edittext_serial_number"
+                style="@style/basic"
+                android:hint="@string/serial_number"
                 android:textAlignment="center"
                 android:maxLines="1"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"/>
-
-            <EditText
-                android:id="@+id/edittext_date_year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:maxLength="2"
-                android:maxLines="1"
-                android:ems="2"
                 android:inputType="number"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="@string/date"
-                android:textAlignment="center"
-                android:textSize="@dimen/size_normal"/>
-        </LinearLayout>
+            <LinearLayout
+                style="@style/basic"
+                android:gravity="center">
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-    <LinearLayout
-        style="@style/basic"
-        android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/edittext_date_day"
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:maxLines="1"
+                        android:ems="2"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/mail_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:inputType="number"
-            android:hint="@string/mail_number"
-            android:textSize="@dimen/size_normal"
-            android:textColorHint="@color/white_yellow"
-            android:textColor="@color/white_yellow"
-            android:maxLines="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"/>
 
-        <View
-            android:layout_width="250dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="@dimen/margin_small"
-            android:background="@color/gold"
-            android:layout_marginRight="@dimen/margin_small"/>
+                    <EditText
+                        android:id="@+id/edittext_date_month"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:ems="2"
+                        android:textAlignment="center"
+                        android:maxLines="1"
+                        android:layout_height="wrap_content"/>
 
-        <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"/>
+
+                    <EditText
+                        android:id="@+id/edittext_date_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:ems="2"
+                        android:inputType="number"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/date"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/size_normal"/>
+                </LinearLayout>
+
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/basic"
+                android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/mail_date_day"
-                    android:inputType="number"
-                    android:textColor="@color/white"
-                    android:maxLength="2"
-                    android:maxLines="1"
-                    android:ems="2"
-                    android:textAlignment="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
+                    android:id="@+id/mail_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="/"/>
-
-                <EditText
-                    android:id="@+id/mail_date_month"
+                    android:layout_gravity="center_horizontal"
                     android:inputType="number"
-                    android:textColor="@color/white"
-                    android:layout_width="wrap_content"
-                    android:maxLength="2"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:ems="2"
-                    android:layout_height="wrap_content"/>
+                    android:hint="@string/mail_number"
+                    android:textSize="@dimen/size_normal"
+                    android:textColorHint="@color/white_yellow"
+                    android:textColor="@color/white_yellow"
+                    android:maxLines="1"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@color/gold"
+                    android:layout_marginRight="@dimen/margin_small"/>
+
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:text="/"/>
+                    android:gravity="center_horizontal">
 
-                <EditText
-                    android:id="@+id/mail_date_year"
-                    android:inputType="number"
-                    android:textColor="@color/white"
-                    android:layout_width="wrap_content"
-                    android:maxLength="2"
-                    android:textAlignment="center"
-                    android:maxLines="1"
-                    android:ems="2"
-                    android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:layout_marginLeft="25dp"
-                    android:text="@string/date"
-                    android:textSize="@dimen/size_normal"/>
+                        <EditText
+                            android:id="@+id/mail_date_day"
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:ems="2"
+                            android:textAlignment="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"/>
+
+                        <EditText
+                            android:id="@+id/mail_date_month"
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:textAlignment="center"
+                            android:ems="2"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"/>
+
+                        <EditText
+                            android:id="@+id/mail_date_year"
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:maxLength="2"
+                            android:textAlignment="center"
+                            android:maxLines="1"
+                            android:ems="2"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:layout_marginLeft="25dp"
+                            android:text="@string/date"
+                            android:textSize="@dimen/size_normal"/>
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_submit"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/frame_full"
+                style="@style/basic"
+                android:text="@string/ok"/>
+
         </LinearLayout>
 
-    </LinearLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_submit"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/frame_full"
-        style="@style/basic"
-        android:text="@string/ok"/>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
